@@ -1,0 +1,18 @@
+:root {
+  --font-family: "Kumbh Sans", sans-serif;
+
+  --fw-700: 700;
+  --fw-400: 400;
+
+  --fs-44: 44px;
+  --fs-28: 28px;
+  --fs-18: 18px;
+  --fs-16: 16px;
+  --fs-15: 15px;
+  --fs-13: 13px;
+  --fs-12: 12px;
+}
+
+body {
+  font-family: var(--font-family);
+}
