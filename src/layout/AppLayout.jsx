@@ -7,13 +7,13 @@ function AppLayout() {
   const isLoading = navigation.state === "loading";
 
   return (
-    <div>
+    <>
       {isLoading && <Loader />}
       <Header />
       <main>
         <Outlet />
       </main>
-    </div>
+    </>
   );
 }
 
