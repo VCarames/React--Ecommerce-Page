@@ -28,12 +28,15 @@ function Navbar() {
   }, [location]);
 
   const toggleNav = () => {
-    setIsNavExpanded((prevExpanded) => !prevExpanded);
-    if (!isNavExpanded) {
-      document.body.classList.add("disable-scroll");
-    } else {
-      document.body.classList.remove("disable-scroll");
-    }
+    setIsNavExpanded((prevExpanded) => {
+      const newState = !prevExpanded;
+      if (newState) {
+        document.body.classList.add("disable-scroll");
+      } else {
+        document.body.classList.remove("disable-scroll");
+      }
+      return newState;
+    });
   };
 
   const closeNav = () => {
