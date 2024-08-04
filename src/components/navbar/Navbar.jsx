@@ -28,15 +28,12 @@ function Navbar() {
   }, [location]);
 
   const toggleNav = () => {
-    setIsNavExpanded((prevExpanded) => {
-      const newState = !prevExpanded;
-      if (newState) {
-        document.body.classList.add("disable-scroll");
-      } else {
-        document.body.classList.remove("disable-scroll");
-      }
-      return newState;
-    });
+    setIsNavExpanded((prevExpanded) => !prevExpanded);
+    if (!isNavExpanded) {
+      document.body.classList.add("disable-scroll");
+    } else {
+      document.body.classList.remove("disable-scroll");
+    }
   };
 
   const closeNav = () => {
@@ -61,6 +58,7 @@ function Navbar() {
         isNavExpanded={isNavExpanded}
         navMenuRef={navMenuRef}
         handleFocusOut={handleFocusOut}
+        toggleNav={toggleNav}
       />
     </nav>
   );
