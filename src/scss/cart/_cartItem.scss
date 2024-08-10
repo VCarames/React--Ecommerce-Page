@@ -1,0 +1,40 @@
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__image {
+    max-width: 3.13rem;
+    border-radius: 0.25rem;
+    overflow: hidden;
+  }
+
+  &__info {
+    display: grid;
+  }
+
+  &__name,
+  &__price {
+    color: var(--primary-clr-one);
+    font-size: var(--fs-16);
+    font-weight: var(--fw-400);
+    line-height: 1.63;
+  }
+
+  &__price-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__quantity {
+    font-weight: var(--fw-700);
+  }
+
+  &__total-price {
+    color: var(--primary-clr-two);
+    font-size: var(--fs-16);
+    font-weight: var(--fw-700);
+    line-height: 1.63;
+  }
+}
