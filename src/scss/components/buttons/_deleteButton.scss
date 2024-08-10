@@ -1,0 +1,10 @@
+.delete__button {
+  fill: hsl(219, 23%, 81%);
+
+  @media (hover: hover) {
+    &:is(:hover, :focus, :focus-visible) {
+      transform: scale(1.1);
+      transition: 0.8s all;
+    }
+  }
+}
