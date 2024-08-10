@@ -1,0 +1,17 @@
+.cart__checkout {
+  color: var(--primary-clr-two);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-700);
+  line-height: normal;
+
+  padding: 1.13rem 1.13rem 1.13rem 1.13rem;
+  border-radius: 0.63rem;
+  background: var(--primary-clr-three);
+
+  @media (hover: hover) {
+    &:is(:hover, :focus, :focus-visible) {
+      background: var(--primary-clr-three--hover);
+      transition: 0.8s all;
+    }
+  }
+}
