@@ -12,7 +12,8 @@ function CartItem({ item }) {
         <p className="cart-item__name">{name}</p>
         <div className="cart-item__price-details">
           <p className="cart-item__price">
-            {formatCurrency(currentPrice)} &times; {quantity}
+            {formatCurrency(currentPrice)}{" "}
+            <span className="cart-item__quantity">&times; {quantity}</span>
           </p>
           <p className="cart-item__total-price">{formatCurrency(totalPrice)}</p>
         </div>
