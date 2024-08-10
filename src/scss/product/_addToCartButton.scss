@@ -1,0 +1,26 @@
+.product__add-to-cart {
+  width: 100%;
+
+  color: var(--primary-clr-two);
+  font-size: var(--fs-16);
+  font-weight: var(--fw-700);
+  line-height: normal;
+
+  gap: 0.97rem;
+
+  padding: 1.13rem 1.88rem 1.13rem 1.88rem;
+  border-radius: 10px;
+  background: var(--primary-clr-three);
+  box-shadow: 0px 20px 50px -20px var(--primary-clr-three);
+
+  @media (hover: hover) {
+    &:is(:hover, :focus, :focus-visible) {
+      background: var(--primary-clr-three--hover);
+      transition: 0.8s all;
+    }
+  }
+
+  &--icon {
+    fill: currentColor;
+  }
+}
