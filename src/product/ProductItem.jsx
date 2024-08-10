@@ -1,11 +1,10 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { formatCurrency } from "../utilities/formatCurrency";
-import { addItem, getCurrentQuantityById } from "../cart/CartSlice.js";
+import { getCurrentQuantityById } from "../cart/CartSlice.js";
 import UpdateItemQuantity from "./UpdateItemQuantity.jsx";
+import AddToCartButton from "./AddToCartButton.jsx";
 
 function ProductItem({ product }) {
-  const dispatch = useDispatch();
-
   const {
     id,
     brand,
@@ -20,22 +19,6 @@ function ProductItem({ product }) {
   } = product;
 
   const currentQuantity = useSelector(getCurrentQuantityById(id));
-
-  function handleAddToCart() {
-    const newItem = {
-      productId: id,
-      brand,
-      name,
-      thumbnail,
-      quantity: 1,
-      currentPrice,
-      previousPrice,
-      discount,
-      totalPrice: currentPrice * 1,
-    };
-
-    dispatch(addItem(newItem));
-  }
 
   return (
     <div className="product__content">
@@ -68,13 +51,7 @@ function ProductItem({ product }) {
                 currentQuantity={currentQuantity}
               />
 
-              <button
-                className="button button--add-cart"
-                onClick={handleAddToCart}
-              >
-                <img src="/images/icons/icon-cart.svg" alt="" />
-                <span>Add to cart</span>
-              </button>
+              <AddToCartButton product={product} />
             </div>
           )}
         </div>
