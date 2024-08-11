@@ -14,7 +14,7 @@ function UpdateItemQuantity({ productId, currentQuantity }) {
         onClick={() => dispatch(decreaseItemQuantity(productId))}
         aria-label="Decrease quantity"
       >
-        <img src="/images/icons/icon-minus.svg" />
+        <img src="/images/icons/icon-minus.svg" alt="" />
       </button>
       <span className="quantity__value">{currentQuantity}</span>
       <button
@@ -22,7 +22,7 @@ function UpdateItemQuantity({ productId, currentQuantity }) {
         onClick={() => dispatch(increaseItemQuantity(productId))}
         aria-label="Increase quantity"
       >
-        <img src="/images/icons/icon-plus.svg" />
+        <img src="/images/icons/icon-plus.svg" alt="" />
       </button>
     </div>
   );
