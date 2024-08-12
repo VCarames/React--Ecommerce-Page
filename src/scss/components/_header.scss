@@ -9,41 +9,41 @@
     align-items: center;
     justify-content: space-between;
 
-    padding: 1.19rem 1.5rem 2.13rem 1.5rem;
+    padding: 1.19rem 1.5rem 22px 1.5rem;
     margin: 0 auto;
 
-    border-bottom: 0.06rem solid hsl(219, 35%, 92%);
+    border-bottom: 0.06rem solid var(--header-border-clr);
 
     @media (min-width: 62.5rem) {
-      padding: 1.75rem 2.06rem 2.13rem 2.06rem;
+      padding: 1.75rem 2.06rem 34px 2.06rem;
     }
   }
 
-  &__container {
+  &__group {
     display: flex;
     align-items: center;
 
-    &--one {
+    &--primary {
       gap: 1rem;
     }
 
-    &--two {
-      gap: 1.38rem;
+    &--secondary {
+      gap: 21px;
     }
 
     @media (min-width: 62.5rem) {
-      &--one {
+      &--primary {
         flex-direction: row-reverse;
         gap: 3.53rem;
       }
 
-      &--two {
-        gap: 2.88rem;
+      &--secondary {
+        gap: 1.44rem;
       }
     }
   }
 
-  &__user {
+  &__user-avatar {
     max-width: 1.5rem;
 
     @media (min-width: 62.5rem) {
