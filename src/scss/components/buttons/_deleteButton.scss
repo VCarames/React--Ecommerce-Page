@@ -1,5 +1,5 @@
 .delete__button {
-  fill: hsl(219, 23%, 81%);
+  fill: var(--neutral-clr-two);
 
   @media (hover: hover) {
     &:is(:hover, :focus, :focus-visible) {
