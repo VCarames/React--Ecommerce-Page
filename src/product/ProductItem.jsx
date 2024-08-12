@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
-import { formatCurrency } from "../utilities/formatCurrency";
 import { getCurrentQuantityById } from "../cart/CartSlice.js";
+import ProductImageGallery from "./ProductImageGallery.jsx";
+import { formatCurrency } from "../utilities/formatCurrency";
 import UpdateItemQuantity from "./UpdateItemQuantity.jsx";
 import AddToCartButton from "./AddToCartButton.jsx";
 
@@ -15,22 +16,26 @@ function ProductItem({ product }) {
     description,
     outOfStock,
     imageUrl,
-    thumbnail,
+    thumbnails,
   } = product;
 
   const currentQuantity = useSelector(getCurrentQuantityById(id));
 
   return (
     <div className="product__content">
-      <img className="product__img" src={imageUrl} alt={name} />
-      <div className="product__details--info">
+      <ProductImageGallery
+        imageUrl={imageUrl}
+        name={name}
+        thumbnails={thumbnails}
+      />
+      <div className="product__details">
         <p className="product__brand">{brand}</p>
         <h2 className="product__name">{name}</h2>
         <p className="product__description">{description}</p>
-        <div className="product__details--price">
+        <div className="product__group">
           {!outOfStock ? (
             <div className="product__price">
-              <div className="product__price--container">
+              <div className="product__group--price">
                 <p className="product__price--current">
                   {formatCurrency(currentPrice)}
                 </p>
@@ -41,11 +46,11 @@ function ProductItem({ product }) {
               </del>
             </div>
           ) : (
-            <p className="product__soldout">Sold out</p>
+            <p className="product__price--soldout">Sold out</p>
           )}
 
           {!outOfStock && (
-            <div className="product__cta">
+            <div className="product__controls">
               <UpdateItemQuantity
                 productId={id}
                 currentQuantity={currentQuantity}
