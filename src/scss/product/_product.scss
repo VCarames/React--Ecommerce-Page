@@ -1,0 +1,159 @@
+.product {
+  display: grid;
+  gap: 8.75rem;
+
+  @media (min-width: 43.75rem) {
+    padding: 0 2.06rem 0 2.06rem;
+    margin-top: 5.69rem;
+  }
+
+  &__content {
+    max-width: 36.5rem;
+
+    display: grid;
+    gap: 1.56rem;
+
+    margin: 0 auto;
+
+    transition: 0.8s all;
+
+    @media (min-width: 62.5rem) {
+      max-width: 73.5rem;
+
+      grid-template-columns: repeat(2, 1fr);
+      gap: 7.88rem;
+    }
+  }
+
+  &__details {
+    padding: 0 1.5rem 0 1.5rem;
+
+    @media (min-width: 62.5rem) {
+      max-width: 27.81rem;
+      padding: 3.81rem 0 0 0;
+    }
+  }
+
+  &__brand {
+    color: var(--primary-clr-one);
+    font-size: var(--fs-12);
+    font-weight: var(--fw-700);
+    line-height: normal;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+
+    margin-bottom: 0.81rem;
+
+    @media (min-width: 62.5rem) {
+      font-size: var(--fs-13);
+      letter-spacing: 0.13rem;
+
+      margin-bottom: 1.19rem;
+    }
+  }
+
+  &__name {
+    color: var(--primary-clr-two);
+    font-size: var(--fs-28);
+    font-weight: var(--fw-700);
+    line-height: 1.14;
+
+    margin-bottom: 0.94rem;
+
+    @media (min-width: 62.5rem) {
+      font-size: var(--fs-44);
+      line-height: 1.09;
+
+      margin-bottom: 2.31rem;
+    }
+  }
+
+  &__description {
+    color: var(--primary-clr-one);
+    font-size: var(--fs-15);
+    font-style: normal;
+    font-weight: var(--fw-400);
+    line-height: 1.67;
+
+    margin-bottom: 1.5rem;
+
+    @media (min-width: 62.5rem) {
+      font-size: var(--fs-16);
+      line-height: 1.63;
+
+      margin-bottom: 1.38rem;
+    }
+  }
+
+  &__group {
+    display: grid;
+    gap: 1.56rem;
+
+    @media (min-width: 62.5rem) {
+      gap: 1.94rem;
+    }
+
+    &--price {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (min-width: 62.5rem) {
+      flex-direction: column;
+      align-items: start;
+      gap: 0.63rem;
+    }
+
+    &--current,
+    &--soldout {
+      color: var(--primary-clr-two);
+      font-size: var(--fs-28);
+      font-weight: var(--fw-700);
+      line-height: normal;
+
+      letter-spacing: 0.07rem;
+    }
+
+    &--discount {
+      display: grid;
+      place-content: center;
+
+      color: var(--neutral-clr-one);
+      font-size: var(--fs-16);
+      font-weight: var(--fw-700);
+      line-height: normal;
+
+      padding: 0.25rem 0.56rem 0.19rem 0.63rem;
+
+      border-radius: 0.38rem;
+      background: var(--primary-clr-two);
+    }
+
+    &--previous {
+      color: var(--primary-clr-one);
+      font-size: var(--fs-16);
+      font-style: normal;
+      font-weight: var(--fw-700);
+      line-height: 1.63;
+      text-decoration-line: strikethrough;
+    }
+  }
+
+  &__controls {
+    width: 100%;
+    display: grid;
+
+    gap: 1rem;
+
+    @media (min-width: 62.5rem) {
+      grid-template-columns: 1fr 1.72fr;
+    }
+  }
+}
