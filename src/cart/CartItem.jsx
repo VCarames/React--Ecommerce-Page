@@ -2,8 +2,19 @@ import { formatCurrency } from "../utilities/formatCurrency";
 import DeleteButton from "../components/buttons/DeleteButton";
 
 function CartItem({ item }) {
-  const { productId, thumbnail, name, currentPrice, quantity, totalPrice } =
-    item;
+  const {
+    productId,
+    thumbnails = [],
+    name,
+    currentPrice,
+    quantity,
+    totalPrice,
+  } = item;
+
+  const thumbnail =
+    thumbnails.length > 0
+      ? thumbnails[0]
+      : "/images/product/image-product-1-thumbnail.jpg";
 
   return (
     <li className="cart-item" role="listitem">
